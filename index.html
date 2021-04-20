@@ -3,39 +3,104 @@
   <head>
     <meta charset="utf-8">
     <link type="text/css" rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/jquery.fullpage.css">
     <title>Timmy Tang</title>
   </head>
-  <body>
-    <div id="fullpage">
-      <div class="section " id="section0">
-    		<h1>Introduction</h1>
-        <p>
-          Welcome to this page!<br>
-          In this page, you can know more about me~
-        </p>
+  <body onload="navActive()" onhashchange="navActive()">
+    <div class="nav ">
+      <table>
+        <tr>
+          <td>
+            <div class="pad-lr-20 nav-container" onclick="location.href='#header'">
+              <img src="./img/icon/home.svg" class="nav-icon">
+              Home
+            </div>
+          </td>
+          <td>
+            <div class="pad-lr-20 nav-container" onclick="location.href='#intro'">
+              <img src="./img/icon/intro.svg" class="nav-icon">
+              Introduction
+            </div>
+          </td>
+          <td>
+            <div class="pad-lr-20 nav-container" onclick="location.href='#about_me'">
+              <img src="./img/icon/user.svg" class="nav-icon">
+              About Me
+            </div>
+          </td>
+          <td>
+            <div class="pad-lr-20 nav-container" onclick="location.href='#edu'">
+              <img src="./img/icon/edu.svg" class="nav-icon">
+              Education
+            </div>
+          </td>
+          <td>
+            <div class="pad-lr-20 nav-container" onclick="location.href='#skills'">
+              <img src="./img/icon/skills.svg" class="nav-icon">
+              Skills
+            </div>
+          </td>
+          <td>
+            <div class="pad-lr-20 nav-container" onclick="location.href='#pro'">
+              <img src="./img/icon/pro.svg" class="nav-icon">
+              Portfolio
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="fullpage" class="fp-responsive">
+      <div class="section fp-auto-height" id="section0">
+        <div class="header pad-lr-20">
+          <div><h3>T</h3></div>
+          <div><h3>T</h3></div>
+    	    <h1>Timmy Tang</h1>
+        </div>
     	</div>
       <div class="section " id="section1">
+        <div class="pad-lr-20">
+      		<h1>Introduction</h1>
+          <p>
+            Welcome to this website!<br>
+          </p>
+          <p>
+            Scroll Down
+          </p>
+          <p>
+            and
+          </p>
+          <p>
+            you can get to know me
+          </p>
+        </div>
+    	</div>
+      <div class="section fp-auto-height" id="section2">
     		<h1>About Me</h1>
         <p>
 
         </p>
     	</div>
-      <div class="section " id="section2">
+      <div class="section fp-auto-height" id="section3">
     		<h1>Education</h1>
         <div>
 
         </div>
     	</div>
-      <div class="section " id="section2">
+      <div class="section " id="section4">
     		<h1>Skills</h1>
         <div>
 
         </div>
     	</div>
-      <div class="section " id="section2">
+      <div class="section " id="section5">
     		<h1>Portfolio</h1>
         <div>
 
+        </div>
+    	</div>
+      <div class="section fp-auto-height" id="section6">
+        <div class="footer">
+          Copyright© TimmyTang 2021
         </div>
     	</div>
     </div>
@@ -43,11 +108,17 @@
   <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="./js/jquery.fullPage.js"></script>
   <script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        verticalCentered: true,
+        anchors: ['header', 'intro', 'about_me','edu','skills','pro','footer'],
+        sectionsColor: ['#1bbc9b', '#4AAFC3', '#7BAABE','#1090b0','#10b07d','#4CAF50','#2e2c2c'],
+        navigation: true,
+        navigationTooltips:['Home', 'Introduction', 'About Me','Education','Skills','Portfolio','Footer'],
+      });
+    });
 
-			});
-		});
-	</script>
+
+  </script>
   <script type="text/javascript" src="./js/script.js"></script>
 </html>
