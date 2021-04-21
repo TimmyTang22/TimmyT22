@@ -16,3 +16,6 @@ function hashAnim(){
         $('.chat-box').removeClass("chat-box-active");
     }
 }
+function hashload(){
+  window.location = "#home";
+}

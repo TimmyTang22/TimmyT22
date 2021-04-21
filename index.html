@@ -23,7 +23,7 @@
     </style>
     <title>Timmy Tang</title>
   </head>
-  <body onload="hashAnim();" onhashchange="hashAnim();">
+  <body onload="hashload();" onhashchange="hashAnim();">
     <div class="nav ">
       <table>
         <tr>
@@ -67,6 +67,7 @@
       </table>
     </div>
     <div id="fullpage" class="fp-responsive">
+      <!-- home -->
       <div class="section " id="section0">
         <img class="home-anim" src="./img/icon/home.svg">
         <img class="human-anim" src="./img/picture/working.svg">
@@ -74,8 +75,9 @@
     	    <h1>Timmy Tang</h1>
         </div>
     	</div>
-      <div class="section " id="section1">
 
+      <!-- intro -->
+      <div class="section " id="section1">
         <div class="paper-anim">
           <div class="intro-content">
         		<h1>Introduction</h1>
@@ -95,10 +97,11 @@
               Let's <b>SCROLL</b> It!
             </p>
           </div>
-
           <img class="paper" src="./img/picture/paper.svg">
         </div>
     	</div>
+
+      <!-- about me -->
       <div class="section fp-auto-height" id="section2">
         <div class="about_me">
       		<h1>About Me</h1>
@@ -112,6 +115,8 @@
           </div>
         </div>
     	</div>
+
+      <!-- edu -->
       <div class="section " id="section3">
     		<h1>Education</h1>
           <div class="edu-container">
@@ -140,6 +145,8 @@
             </div>
           </div>
     	</div>
+
+      <!-- skills -->
       <div class="section fp-auto-height" id="section4">
     		<h1>Skills</h1>
         <div class="swiper-container">
@@ -161,6 +168,7 @@
         </div>
     	</div>
 
+      <!-- Portfolio -->
       <div class="section " id="section5">
     		<h1>Portfolio</h1>
         <div>
