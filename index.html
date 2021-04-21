@@ -4,14 +4,31 @@
     <meta charset="utf-8">
     <link type="text/css" rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/jquery.fullpage.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <style>
+      .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        background-repeat:no-repeat;
+        width: 300px;
+        height: 300px;
+
+      }
+    </style>
     <title>Timmy Tang</title>
   </head>
-  <body onload="navActive()" onhashchange="navActive()">
+  <body onload="hashAnim();" onhashchange="hashAnim();">
     <div class="nav ">
       <table>
         <tr>
           <td>
-            <div class="pad-lr-20 nav-container" onclick="location.href='#header'">
+            <div class="pad-lr-20 nav-container" onclick="location.href='#home'">
               <img src="./img/icon/home.svg" class="nav-icon">
               Home
             </div>
@@ -50,46 +67,100 @@
       </table>
     </div>
     <div id="fullpage" class="fp-responsive">
-      <div class="section fp-auto-height" id="section0">
-        <div class="header pad-lr-20">
+      <div class="section " id="section0">
+        <img class="home-anim" src="./img/icon/home.svg">
+        <img class="human-anim" src="./img/picture/working.svg">
+        <div class="header">
     	    <h1>Timmy Tang</h1>
         </div>
     	</div>
       <div class="section " id="section1">
-        <div class="pad-lr-20">
-      		<h1>Introduction</h1>
-          <p>
-            Welcome to this website!<br>
-          </p>
-          <p>
-            Scroll Down
-          </p>
-          <p>
-            and
-          </p>
-          <p>
-            you can get to know me
-          </p>
+
+        <div class="paper-anim">
+          <div class="intro-content">
+        		<h1>Introduction</h1>
+            <p>
+              Welcome to this website!
+            </p>
+            <p>
+              Scroll Down and
+            </p>
+            <p>
+              you can get to know me
+            </p>
+            <p>
+              I am trying to make something special
+            </p>
+            <p>
+              Let's <b>SCROLL</b> It!
+            </p>
+          </div>
+
+          <img class="paper" src="./img/picture/paper.svg">
         </div>
     	</div>
       <div class="section fp-auto-height" id="section2">
-    		<h1>About Me</h1>
-        <p>
-
-        </p>
+        <div class="about_me">
+      		<h1>About Me</h1>
+          <img class="ppl" src="./img/picture/arm-up.svg">
+          <div class="chat-box">
+            <ul>
+              <li>willing to take challenge</li>
+              <li>keep learning</li>
+              <li>hard worker</li>
+            </ul>
+          </div>
+        </div>
     	</div>
-      <div class="section fp-auto-height" id="section3">
+      <div class="section " id="section3">
     		<h1>Education</h1>
-        <div>
-
-        </div>
+          <div class="edu-container">
+            <div>
+              <img src="./img/logo/polyu-speed.png">
+            </div>
+            <div>
+              Bachelor of Science in applied sciences<br>
+              (Information systems and Web Technologies)<br>
+              Second Class Honours (Division 1)
+            </div>
+            <div>
+              Sep2018-Aug2020
+            </div>
+          </div>
+          <br>
+          <div class="edu-container" style="border-color: rgb(128,0,128);">
+            <div>
+              <img src="./img/logo/CUSCS.png">
+            </div>
+            <div>
+              Higher Diploma in Computer Game Development
+            </div>
+            <div>
+              Sep2016-Aug2018
+            </div>
+          </div>
     	</div>
-      <div class="section " id="section4">
+      <div class="section fp-auto-height" id="section4">
     		<h1>Skills</h1>
-        <div>
-
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(./img/logo/js.png)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/logo/html5.svg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/logo/css-3.svg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/logo/jquery.png)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/logo/mysql.png); background-size:contain;"></div>
+            <div class="swiper-slide" style="background-image:url(./img/logo/php.png) ;background-size:contain;"></div>
+            <div class="swiper-slide" style="background-image:url(./img/logo/bootstrap.png)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/logo/python.png)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/logo/unity.png)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/logo/andStudio.png)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/logo/wordpress.png); background-size:contain;"></div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
     	</div>
+
       <div class="section " id="section5">
     		<h1>Portfolio</h1>
         <div>
@@ -109,14 +180,30 @@
     $(document).ready(function() {
       $('#fullpage').fullpage({
         verticalCentered: true,
-        anchors: ['header', 'intro', 'about_me','edu','skills','pro','footer'],
+        anchors: ['home', 'intro', 'about_me','edu','skills','pro','footer'],
         sectionsColor: ['#1bbc9b', '#4AAFC3', '#7BAABE','#1090b0','#10b07d','#4CAF50','#2e2c2c'],
-        navigation: true,
-        navigationTooltips:['Home', 'Introduction', 'About Me','Education','Skills','Portfolio','Footer'],
-      });
+        });
     });
-
-
+</script>
+	<script type="text/javascript" src="./js/swiper-bundle.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
   </script>
+
   <script type="text/javascript" src="./js/script.js"></script>
 </html>
