@@ -200,7 +200,7 @@ h2{
   display: none;
   width:0;
 }
-@media (min-width:992px) {
+@media (max-width:992px) {
     .edu-container div img {
       width: 200px;
       height: 150px;
