@@ -200,7 +200,7 @@ h2{
   display: none;
   width:0;
 }
-@media (max-width:992px) {
+@media (max-device-width:992px) {
     .edu-container div img {
       width: 200px;
       height: 150px;
@@ -215,12 +215,12 @@ h2{
     font-size: 5vw;
   }
   .nav{
-    height: 48px;
+    height:150px;
   }
   .nav-container{
-    font-size: 32px;
+    font-size: 48px;
   }
-  .nav-container{
-    width: 32px;
+  .nav-icon{
+    width: 48px;
   }
 }
