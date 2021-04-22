@@ -18,7 +18,6 @@
         background-repeat:no-repeat;
         width: 300px;
         height: 300px;
-
       }
     </style>
     <title>Timmy Tang</title>
@@ -169,12 +168,45 @@
     	</div>
 
       <!-- Portfolio -->
-      <div class="section " id="section5">
-    		<h1>Portfolio</h1>
+      <div class="section fp-auto-height" id="section5">
         <div>
-
+    		<h1>Portfolio</h1>
+          <hr>
+          <div class="prof">
+            <h2>CodePen</h2>
+            <iframe height="550" style="width: 80vw;" scrolling="no" title="Cal" src="https://codepen.io/timmytang22/embed/BaQZKby?height=550&theme-id=dark&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+              See the Pen <a href='https://codepen.io/timmytang22/pen/BaQZKby'>Cal</a> by TimmyTang22
+              (<a href='https://codepen.io/timmytang22'>@timmytang22</a>) on <a href='https://codepen.io'>CodePen</a>.
+            </iframe>
+            <iframe height="675" style="width: 80vw;" scrolling="no" title="Calculator" src="https://codepen.io/timmytang22/embed/JjKXKWx?height=675&theme-id=dark&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+              See the Pen <a href='https://codepen.io/timmytang22/pen/JjKXKWx'>Calculator</a> by TimmyTang22
+              (<a href='https://codepen.io/timmytang22'>@timmytang22</a>) on <a href='https://codepen.io'>CodePen</a>.
+            </iframe>
+            <hr>
+            <h2>Food order system:(template)</h2>
+            <img src="./img/picture/FOS.png">
+            <hr>
+            <h2>Wordpress</h2>
+            <div class="click-btn" onclick="location.href='https://ecsigp1com.wordpress.com/'">
+              Click Here to have a look
+            </div>
+            <hr>
+            <img src="./img/picture/pro-1.png">
+            <hr>
+            <h2>Share Point/Flow/From</h2>
+            <div>
+              <img src="./img/picture/sp.png">
+            </div>
+            <div>
+              <img src="./img/picture/flow.png">
+            </div>
+            <div>
+              <img src="./img/picture/form.png">
+            </div>
+          </div>
         </div>
     	</div>
+
       <div class="section fp-auto-height" id="section6">
         <div class="footer">
           Copyright© TimmyTang 2021
@@ -184,12 +216,15 @@
   </body>
   <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+  <script type="text/javascript" src="./js/scrolloverflow.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       $('#fullpage').fullpage({
         verticalCentered: true,
         anchors: ['home', 'intro', 'about_me','edu','skills','pro','footer'],
         sectionsColor: ['#1bbc9b', '#4AAFC3', '#7BAABE','#1090b0','#10b07d','#4CAF50','#2e2c2c'],
+        normalScrollElements: '.prof',
+        scrollOverflow: true,
         });
     });
 </script>
@@ -212,6 +247,5 @@
       },
     });
   </script>
-
   <script type="text/javascript" src="./js/script.js"></script>
 </html>
