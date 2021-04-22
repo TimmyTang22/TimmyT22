@@ -208,4 +208,10 @@ h2{
   h1{
     font-size: 10vw;
   }
+  h2{
+    font-size: 7.5vw;
+  }
+  .edu-container div{
+    font-size: 5vw;
+  }
 }
